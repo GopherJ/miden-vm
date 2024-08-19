@@ -125,9 +125,9 @@ checksum = "9d151e35f61089500b617991b791fc8bfd237ae50cd5950803758a179b41e67a"
 
 [[package]]
 name = "arrayvec"
-version = "0.7.4"
+version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "96d30a06541fbafbc7f82ed10c06164cfbd2c401138f6addd8404629c4b16711"
+checksum = "7c02d123df017efcdfbd739ef81735b36c5ba83ec3c59c80a9d7ecc718f92e50"
 
 [[package]]
 name = "ascii-canvas"
@@ -161,6 +161,17 @@ dependencies = [
  "predicates-core",
  "predicates-tree",
  "wait-timeout",
+]
+
+[[package]]
+name = "async-trait"
+version = "0.1.81"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6e0c28dcc82d7c8ead5cb13beb15405b57b8546e93215673ff8ca0349a028107"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -300,9 +311,9 @@ checksum = "37b2a672a2cb129a2e41c10b1224bb368f9f37a2b16b612598138befd7b37eb5"
 
 [[package]]
 name = "cc"
-version = "1.1.12"
+version = "1.1.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "68064e60dbf1f17005c2fde4d07c16d8baa506fd7ffed8ccab702d93617975c7"
+checksum = "72db2f7947ecee9b03b510377e8bb9077afa27176fdbff55c51027e976fdcc48"
 dependencies = [
  "jobserver",
  "libc",
@@ -350,9 +361,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.5.15"
+version = "4.5.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "11d8838454fda655dafd3accb2b6e2bea645b9e4078abe84a22ceb947235c5cc"
+checksum = "ed6719fffa43d0d87e5fd8caeab59be1554fb028cd30edc88fc4369b17971019"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -379,7 +390,7 @@ dependencies = [
  "heck",
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -753,7 +764,7 @@ checksum = "1a5c6c585bc94aaf2c7b51dd4c2ba22680844aba4c687be581871a6f518c5742"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -1162,9 +1173,9 @@ checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
 
 [[package]]
 name = "libc"
-version = "0.2.155"
+version = "0.2.157"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+checksum = "374af5f94e54fa97cf75e945cce8a6b201e88a1a07e688b47dfd2a59c66dbd86"
 
 [[package]]
 name = "libloading"
@@ -1173,7 +1184,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4979f22fdb869068da03c9f7528f8297c6fd2606bc3a4affe42e6a823fdb8da4"
 dependencies = [
  "cfg-if",
- "windows-targets 0.48.5",
+ "windows-targets 0.52.6",
 ]
 
 [[package]]
@@ -1348,14 +1359,13 @@ dependencies = [
  "proptest",
  "winter-math 0.9.0",
  "winter-rand-utils",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
 name = "miden-crypto"
 version = "0.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d6fad06fc3af260ed3c4235821daa2132813d993f96d446856036ae97e9606dd"
+source = "git+https://github.com/GopherJ/miden-crypto?rev=657b4922f3abe3577d1b0de1f6ae6ad52400cb11#657b4922f3abe3577d1b0de1f6ae6ad52400cb11"
 dependencies = [
  "blake3",
  "cc",
@@ -1367,7 +1377,7 @@ dependencies = [
  "sha3",
  "winter-crypto 0.9.0",
  "winter-math 0.9.0",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
@@ -1382,7 +1392,7 @@ dependencies = [
 [[package]]
 name = "miden-gpu"
 version = "0.2.0"
-source = "git+https://github.com/0xPolygonMiden/miden-gpu?rev=b0d809bd6c02a38c8075575edc9190c5ac7f0dd9#b0d809bd6c02a38c8075575edc9190c5ac7f0dd9"
+source = "git+https://github.com/0xPolygonMiden/miden-gpu?rev=b77b4709d69d42ef663ed5ea41f48f8b165f59f2#b77b4709d69d42ef663ed5ea41f48f8b165f59f2"
 dependencies = [
  "bytemuck",
  "elsa",
@@ -1417,7 +1427,7 @@ dependencies = [
  "supports-color",
  "supports-hyperlinks",
  "supports-unicode",
- "syn 2.0.74",
+ "syn 2.0.75",
  "terminal_size",
  "textwrap",
  "trybuild",
@@ -1432,7 +1442,7 @@ checksum = "1cc759f0a2947acae217a2f32f722105cacc57d17d5f93bc16362142943a4edd"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -1447,19 +1457,21 @@ dependencies = [
  "tracing",
  "winter-fri 0.9.0",
  "winter-prover",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
 name = "miden-prover"
 version = "0.10.3"
 dependencies = [
+ "async-trait",
  "elsa",
  "miden-air",
  "miden-gpu",
  "miden-processor",
  "pollster",
  "tracing",
+ "winter-maybe-async 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "winter-prover",
 ]
 
@@ -1517,7 +1529,7 @@ checksum = "0ee4176a0f2e7d29d2a8ee7e60b6deb14ce67a20e94c3e2c7275cdb8804e1862"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -1682,7 +1694,7 @@ checksum = "ed3955f1a9c7c0c15e092f9c887db08b1fc683305fdf6eb6684f22555355e202"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -2275,7 +2287,7 @@ checksum = "24008e81ff7613ed8e5ba0cfaf24e2c2f1e5b8a0495711e44fcd4882fca62bcf"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -2454,9 +2466,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.74"
+version = "2.0.75"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1fceb41e3d546d0bd83421d3409b1460cc7444cd389341a4c880fe7a042cb3d7"
+checksum = "f6af063034fc1935ede7be0122941bafa9bacb949334d090b77ca98b5817c7d9"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2530,7 +2542,7 @@ dependencies = [
  "cfg-if",
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -2541,7 +2553,7 @@ checksum = "5c89e72a01ed4c579669add59014b9a524d609c0c88c6a585ce37485879f6ffb"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
  "test-case-core",
 ]
 
@@ -2573,7 +2585,7 @@ checksum = "a4558b58466b9ad7ca0f102865eccc95938dca1a74a856f2b57b6629050da261"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -2658,7 +2670,7 @@ checksum = "34704c8d6ebcbc939824180af020566b01a7c01f80641264eba0999f6c2b6be7"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -2861,7 +2873,7 @@ dependencies = [
  "once_cell",
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
  "wasm-bindgen-shared",
 ]
 
@@ -2895,7 +2907,7 @@ checksum = "afc340c74d9005395cf9dd098506f7f44e38f2b4a21c6aaacf9a105ea5e1e836"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
@@ -3109,7 +3121,7 @@ checksum = "2bbd5b46c938e506ecbce286b6628a02171d56153ba733b6c741fc627ec9579b"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -3120,7 +3132,7 @@ checksum = "053c4c462dc91d3b1504c6fe5a726dd15e216ba718e84a0e46a88fbe5ded3515"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
 
 [[package]]
@@ -3302,14 +3314,13 @@ dependencies = [
 [[package]]
 name = "winter-air"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b72f12b88ebb060b52c0e9aece9bb64a9fc38daf7ba689dd5ce63271b456c883"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
  "libm",
  "winter-crypto 0.9.0",
  "winter-fri 0.9.0",
  "winter-math 0.9.0",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
@@ -3327,13 +3338,12 @@ dependencies = [
 [[package]]
 name = "winter-crypto"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "00fbb724d2d9fbfd3aa16ea27f5e461d4fe1d74b0c9e0ed1bf79e9e2a955f4d5"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
  "blake3",
  "sha3",
  "winter-math 0.9.0",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
@@ -3350,12 +3360,11 @@ dependencies = [
 [[package]]
 name = "winter-fri"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3ab6077cf4c23c0411f591f4ba29378e27f26acb8cef3c51cadd93daaf6080b3"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
  "winter-crypto 0.9.0",
  "winter-math 0.9.0",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
@@ -3370,10 +3379,9 @@ dependencies = [
 [[package]]
 name = "winter-math"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "004f85bb051ce986ec0b9a2bd90aaf81b83e3c67464becfdf7db31f14c1019ba"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
@@ -3384,32 +3392,41 @@ checksum = "7ce0f4161cdde50de809b3869c1cb083a09e92e949428ea28f04c0d64045875c"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
+]
+
+[[package]]
+name = "winter-maybe-async"
+version = "0.9.0"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.75",
 ]
 
 [[package]]
 name = "winter-prover"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f17e3dbae97050f58e01ed4f12906e247841575a0518632e052941a1c37468df"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
+ "async-trait",
  "tracing",
  "winter-air",
  "winter-crypto 0.9.0",
  "winter-fri 0.9.0",
  "winter-math 0.9.0",
- "winter-maybe-async",
- "winter-utils 0.9.1",
+ "winter-maybe-async 0.9.0 (git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e)",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
 name = "winter-rand-utils"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2b827c901ab0c316d89812858ff451d60855c0a5c7ae734b098c62a28624181"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
  "rand",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
@@ -3420,9 +3437,8 @@ checksum = "ef7d7195967f35140fc2542b44813572e0907cde8a818507177ba8db666e7f17"
 
 [[package]]
 name = "winter-utils"
-version = "0.9.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0568612a95bcae3c94fb14da2686f8279ca77723dbdf1e97cf3673798faf6485"
+version = "0.9.0"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
  "rayon",
 ]
@@ -3430,14 +3446,13 @@ dependencies = [
 [[package]]
 name = "winter-verifier"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "324002ade90f21e85599d51a232a80781efc8cb46f511f8bc89f9c5a4eb9cb65"
+source = "git+https://github.com/GopherJ/winterfell?rev=50a9a088d30ff58e88cf19805f4dfa13b4be356e#50a9a088d30ff58e88cf19805f4dfa13b4be356e"
 dependencies = [
  "winter-air",
  "winter-crypto 0.9.0",
  "winter-fri 0.9.0",
  "winter-math 0.9.0",
- "winter-utils 0.9.1",
+ "winter-utils 0.9.0",
 ]
 
 [[package]]
@@ -3470,5 +3485,5 @@ checksum = "fa4f8080344d4671fb4e831a13ad1e68092748387dfc4f55e356242fae12ce3e"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.74",
+ "syn 2.0.75",
 ]
